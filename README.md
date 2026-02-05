@@ -27,7 +27,7 @@ A modern, high-performance culinary portfolio showcasing bespoke catering servic
 To run this project locally, follow these steps:
 
 1.  Clone the repository:
-    [git clone URL]
+    https://github.com/Biodun-D/chef-ade-portfolio.git
 
 2.  Install dependencies:
     npm install
