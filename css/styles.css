@@ -1,0 +1,496 @@
+@import "tailwindcss";
+
+@theme {
+    --breakpoint-lg: 1180px;
+    --breakpoint-mlg: 960px;
+    --breakpoint-md: 800px;
+    --breakpoint-sm: 620px;
+    --breakpoint-xs: 540px;
+    --breakpoint-2xs: 400px;
+    --color-p-color: #4E007C;
+    --color-s-color: #A100FF;
+    --color-t-color: #D300FE;
+    --color-btn-color: #7E0098;
+    --color-f-color: #df00ff;
+    --color-g-color: #2d1b36;
+    --animate-marquee: marquee 40s linear infinite;
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+}
+
+/* Tailwind CSS Styles */
+.max-width {
+    @apply max-w-360 mx-auto;
+}
+
+.div-box {
+    @apply block px-[5%] pt-[10%] pb-[20%] md:pb-[10%] w-full;
+}
+
+.div-box2 {
+    @apply block px-[5%] py-[20%] md:py-[10%] w-full;
+}
+
+.div-box3 {
+    @apply block py-[20%] md:py-[10%] w-full;
+}
+
+/* Nav-Bar */
+.nav-style {
+    @apply absolute top-0 left-0 right-0 flex md:justify-between items-center w-full mx-0 py-[2%] px-[5%];
+}
+
+.nav-logo {
+    @apply flex items-center justify-center bg-transparent 2xs:bg-t-color/20 w-10 h-10 rounded-lg 2xs:shadow-sm;
+}
+
+.nav-title {
+    @apply text-p-color text-base 2xs:text-lg uppercase;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+.nav-actions {
+    @apply hidden md:flex gap-8 lg:gap-12 text-sm text-t-color/40 uppercase;
+}
+
+
+/* Hero Image */
+.hero-image-box {
+    @apply flex items-center justify-center pt-12 lg:pt-0 lg:justify-end;
+}
+
+.hero-image-div {
+    @apply relative w-80 2xs:w-104 xs:w-120 sm:w-140;
+}
+
+.hero-image-rect {
+    @apply absolute flex-initial bg-s-color right-0 top-24 xs:top-28 sm:top-32 h-72 2xs:h-88 xs:h-104 sm:h-120 w-80 2xs:w-104 xs:w-120 sm:w-140 rounded-[56px] 2xs:rounded-[80px];
+}
+
+.hero-image {
+    @apply absolute h-96 2xs:h-112 xs:h-132 sm:h-152 w-80 2xs:w-104 xs:w-120 sm:w-140 top-0 right-0;
+}
+
+.hero-blur {
+    @apply blur-2xl absolute right-0 top-76 2xs:top-92 xs:top-112 sm:top-132 h-20 w-80 2xs:w-104 xs:w-120 sm:w-140 rounded-b-[80px];
+    background: linear-gradient(180deg, rgb(255, 255, 255, 0.20) 0%, #A100FF 100%);
+}
+
+.hero-blur-div {
+    @apply bg-transparent absolute -right-4 2xs:-right-8 xs:-right-10 top-78 2xs:top-92 xs:top-112 sm:top-132 h-20 w-80 2xs:w-104 xs:w-120 sm:w-140 pl-8 rounded-b-[80px];
+}
+
+.hero-blur-title {
+    @apply text-white text-xl 2xs:text-2xl;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.05em;
+}
+
+.hero-blur-subtitle {
+    @apply text-white/75 text-[10px] 2xs:text-xs uppercase mt-1;
+}
+
+.hero-glass {
+    @apply absolute top-24 xs:top-28 sm:top-32 -right-5 border border-t-color/15 p-1.5 2xs:p-3 xs:p-4 rounded-xl shadow-lg animate-[bounce_3s_infinite];
+}
+
+.glass-panel {
+    @apply bg-g-color/5 backdrop-blur-md border border-white/20 dark:border-white/10;
+    /* dark:bg-surface-dark/80 */
+}
+
+.hero-glass-div {
+    @apply flex items-center gap-3;
+}
+
+.hero-glass-icon-div {
+    @apply bg-green-100 text-green-600 p-2 rounded-full;
+}
+
+.hero-glass-icon {
+    @apply text-xs xs:text-sm;
+}
+
+.hero-glass-title {
+    @apply text-gray-900 text-[10px] xs:text-xs uppercase;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+.hero-glass-subtitle {
+    @apply text-[8px] xs:text-[10px] text-gray-300;
+}
+
+.hero-detail-box {
+    @apply flex justify-center lg:justify-start w-full h-full mt-104 2xs:mt-120 xs:mt-140 sm:mt-160 lg:mt-28;
+}
+
+.hero-span-div {
+    @apply flex items-center justify-center lg:justify-start gap-2 2xs:gap-3 pb-5 2xs:pb-6;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+.hero-left-divider {
+    @apply inline-flex h-px w-6 2xs:w-8 bg-s-color;
+}
+
+.hero-right-divider {
+    @apply lg:hidden inline-flex h-px w-6 2xs:w-8 bg-s-color;
+}
+
+.hero-span-title {
+    @apply text-xs 2xs:text-sm text-t-color uppercase;
+}
+
+.hero-detail-title {
+    @apply text-5xl 2xs:text-7xl text-p-color text-center lg:text-left pb-6 2xs:pb-8;
+}
+
+.hero-detail-subtitle {
+    @apply block text-sm 2xs:text-base text-p-color text-center lg:text-left;
+}
+
+.hero-actions {
+    @apply flex flex-col sm:flex-row justify-center lg:justify-start gap-6 sm:gap-8 pt-16 2xs:pt-20;
+}
+
+.hero-p-btn {
+    @apply bg-btn-color text-white text-sm 2xs:text-base text-center px-8 py-4 sm:py-3 rounded-lg shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1;
+}
+
+.hero-s-btn {
+    @apply bg-transparent text-btn-color text-sm 2xs:text-base text-center px-6 py-4 sm:py-3 rounded-lg hover:bg-s-color/3 border border-btn-color;
+}
+
+
+.grid-one {
+    @apply grid grid-cols-1 mlg:grid-cols-3 gap-12 2xs:gap-16;
+}
+
+.group-one-div {
+    @apply flex gap-4 items-baseline justify-center mlg:justify-start mb-4;
+}
+
+.group-one-span {
+    @apply hidden mlg:flex;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.05em;
+}
+
+.group-one-title {
+    @apply text-lg 2xs:text-xl text-p-color text-center mlg:text-left uppercase;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+.group-divider {
+    @apply h-px bg-s-color/25 mb-4 transition-all duration-500 ease-out;
+}
+
+.group-one-subtitle {
+    @apply text-xs 2xs:text-sm text-p-color/70 text-center mlg:text-left font-light;
+}
+
+.service-box {
+    @apply flex flex-col lg:flex-row gap-y-16 2xs:gap-y-24 lg:gap-y-0 lg:gap-x-20;
+}
+
+.service-asset-div {
+    @apply hidden lg:flex basis-full;
+}
+
+.service-asset {
+    @apply bg-transparent h-full w-full p-4 border border-t-color rounded-3xl;
+}
+
+.service-asset2 {
+    @apply bg-transparent h-120 2xs:h-140 w-full p-2 2xs:p-4 border border-t-color rounded-3xl;
+}
+
+.service-image {
+    @apply w-full h-full rounded-2xl object-cover transform transition-transform duration-[2s] hover:scale-102;
+}
+
+.service-span {
+    @apply text-t-color text-[10px] 2xs:text-xs uppercase mb-4;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+.service-title {
+    @apply text-p-color text-3xl 2xs:text-4xl mb-12;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+.service-title-span {
+    @apply text-p-color/75;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.05em;
+}
+
+.service-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 sm:gap-x-10 gap-y-8 2xs:gap-y-12;
+}
+
+.service-grid-title {
+    @apply text-p-color text-base 2xs:text-lg flex items-center gap-2 mb-3;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.02em;
+}
+
+.service-icon {
+    @apply text-s-color text-xs transition-opacity;
+}
+
+.service-grid-subtitle {
+    @apply text-p-color/75 text-xs 2xs:text-sm leading-relaxed pl-5 border-l transition-colors;
+}
+
+.dish-box {
+    @apply flex mb-10 2xs:mb-12 md:mb-14;
+}
+
+.dish-title-div {
+    @apply basis-full sm:basis-2/3 md:basis-1/2;
+}
+
+.dish-span {
+    @apply text-t-color text-[10px] 2xs:text-xs uppercase mb-4;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+.dish-title {
+    @apply text-p-color text-3xl 2xs:text-4xl mb-2 2xs:mb-4;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+.dish-subtitle {
+    @apply text-p-color/75 text-xs 2xs:text-sm;
+}
+
+.dish-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.dish-div {
+    @apply bg-white/50 rounded-2xl border border-t-color/10 hover:shadow-lg;
+}
+
+.dish-grid-div {
+    @apply pt-4 p-8;
+}
+
+.dish-image-box {
+    @apply h-72 overflow-hidden rounded-t-2xl relative;
+}
+
+.dish-image {
+    @apply w-full h-full rounded-t-2xl object-cover transition-transform duration-1000;
+}
+
+.dish-grid-title {
+    @apply text-p-color text-xl 2xs:text-2xl mb-2;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+.dish-grid-subtitle {
+    @apply text-p-color/75 text-xs 2xs:text-sm mb-4 leading-relaxed;
+}
+
+.dish-wrap {
+    @apply text-t-color text-[10px] px-3 py-1 border border-t-color/25 uppercase rounded-full;
+}
+
+.review-span {
+    @apply text-t-color text-[10px] 2xs:text-xs uppercase mb-4;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+.review-title {
+    @apply text-p-color text-3xl 2xs:text-5xl mb-4;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+.review-list {
+    @apply w-full inline-flex flex-nowrap overflow-hidden;
+}
+
+.review-box {
+    @apply bg-s-color/20 p-6 2xs:p-8 rounded-2xl shadow-sm border border-t-color/5 hover:scale-[1.02] transition-all duration-300;
+}
+
+.review-icon {
+    @apply flex text-t-color text-xs 2xs:text-sm mb-4 gap-1;
+}
+
+.review-content {
+    @apply text-p-color/75 text-xs 2xs:text-sm leading-relaxed mb-10;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.05em;
+}
+
+.review-detail {
+    @apply flex items-center gap-4;
+}
+
+.review-image {
+    @apply w-8 2xs:w-10 h-8 2xs:h-10 rounded-full;
+}
+
+.review-name {
+    @apply text-p-color text-xs 2xs:text-sm;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+.review-name-title {
+    @apply text-white text-[10px] 2xs:text-xs;
+}
+
+.contact-box {
+    @apply left-0 right-0 items-center;
+}
+
+.contact-title {
+    @apply text-4xl 2xs:text-6xl text-p-color mb-8;
+}
+
+.contact-subtitle {
+    @apply text-p-color/75 mb-16 max-w-xl mx-auto text-sm 2xs:text-base leading-relaxed;
+}
+
+.contact-btn {
+    @apply bg-btn-color text-white text-xs 2xs:text-sm uppercase py-5 px-16 mb-40 rounded-full shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1;
+}
+
+.footer-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8 pt-12 mt-40 items-center border-t border-white/20;
+}
+
+.footer-detail {
+    @apply text-center md:text-left;
+}
+
+.footer-title {
+    @apply text-white/75 text-base 2xs:text-lg uppercase;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+.footer-subtitle {
+    @apply text-[8px] 2xs:text-[10px] text-gray-300 mt-2 uppercase tracking-wide;
+}
+
+.footer-socials {
+    @apply flex justify-center md:justify-end gap-6;
+}
+
+.footer-icon {
+    @apply w-8 2xs:w-10 h-8 2xs:h-10 rounded-full bg-btn-color/25 flex items-center justify-center text-white/75 hover:bg-btn-color/30 hover:text-white transition-all duration-300;
+}
+
+/* Normal CSS Styles */
+body {
+    margin: 0;
+}
+
+.h1-normal {
+    font-family: "Chau Philomene One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+.h1-italic {
+    font-family: "Chau Philomene One", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.05em;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+a {
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.05em;
+}
+
+.bg-color1 {
+    background: linear-gradient(to bottom, rgb(223, 0, 255, 0.20), rgb(255, 255, 255, 0.20));
+}
+
+.bg-color2 {
+    background-color: white;
+}
+
+.bg-color3 {
+    background: linear-gradient(180deg, rgb(255, 255, 255, 0.20) 0%, rgb(230, 0, 255, 0.20) 100%);
+}
+
+.bg-color4 {
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 20%, rgb(252, 243, 254) 30%, rgb(223, 0, 255) 100%);
+}
+
+.blur-color {
+    background: linear-gradient(180deg, rgb(255, 255, 255, 0.20) 0%, #A100FF 100%);
+}

@@ -1,0 +1,6 @@
+css/output.css
+dist/
+node_modules/
+run.txt
+tailwind_cli_cmd.txt
+.DS_Store
