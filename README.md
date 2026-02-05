@@ -21,6 +21,8 @@ A modern, high-performance culinary portfolio showcasing bespoke catering servic
 * **Build Tool:** [Vite 6+](https://vitejs.dev/)
 * **Hosting:** [Vercel](https://vercel.com/) (Continuous Deployment from GitHub)
 
+---
+
 ⚙️ Local Development
 To run this project locally, follow these steps:
 
