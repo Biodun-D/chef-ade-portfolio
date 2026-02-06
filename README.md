@@ -5,7 +5,7 @@ A modern, high-performance culinary portfolio showcasing bespoke catering servic
 
 
 ## 🚀 Live Demo
-**View the live site here:** [LIVE URL will be here]
+**View the live site here:** https://chef-ade-portfolio.vercel.app/
 
 ---
 
@@ -30,10 +30,10 @@ To run this project locally, follow these steps:
     https://github.com/Biodun-D/chef-ade-portfolio.git
 
 2.  Install dependencies:
-    npm install
+    run -- npm install
 
 3.  Start the development server:
-    npm run dev
+    run -- npm run dev
 
 4.  Build for production:
-    npm run build
+    run -- npm run build
